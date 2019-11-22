@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+    <context id="MysqlContext" targetRuntime="MyBatis3Simple" defaultModelType="flat">
+        <property name="beginningDelimiter" value="`"/>
+        <property name="endingDelimiter" value="`"/>
+
+        <plugin type="tk.mybatis.mapper.generator.MapperPlugin">
+            <property name="mappers" value="cn.shadowcat.utils.MyMapper"/>
+        </plugin>
+
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+                        connectionURL="jdbc:mysql://localhost:3306/dev?serverTimezone=Asia/Shanghai&amp;characterEncoding=utf8&amp;useSSL=false"
+                        userId="root"
+                        password="root">
+        </jdbcConnection>
+
+        <!-- 对应生成的 pojo 所在包 -->
+        <javaModelGenerator targetPackage="cn.shadowcat.pojo" targetProject="src/main/java"/>
+
+        <!-- 对应生成的 mapper 所在目录 -->
+        <sqlMapGenerator targetPackage="mapper" targetProject="src/main/resources"/>
+
+        <!-- 配置 mapper 对应的 java 映射 -->
+        <javaClientGenerator targetPackage="cn.shadowcat.mapper" targetProject="src/main/java"
+                             type="XMLMAPPER"/>
+
+
+        <!-- 在这里定义数据表名称，一行一个 -->
+        <table tableName="users"></table>
+        <table tableName="comments"></table>
+
+    </context>
+</generatorConfiguration>
