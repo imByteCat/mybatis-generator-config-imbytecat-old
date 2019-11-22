@@ -19,12 +19,14 @@ chmod +x ./clean.sh && ./clean.sh
 生成的文件一览：
 
 ```
-# POJO，例如放在项目的 pojo/src/main/java/
+# POJO，例如放在你项目的 pojo/src/main/java/
 src/main/java/cn/shadowcat/pojo/
-# Mapper，例如放在项目的 mapper/src/main/java/cn/shadowcat/mapper
+
+# Mapper，例如放在你项目的 mapper/src/main/java/cn/shadowcat/mapper
 src/main/java/cn/shadowcat/mapper/
-# Mapper XML，例如放在项目的 api/resources/mappers
+
+# Mapper XML，例如放在你项目的 api/resources/mappers
 src/main/resources/mapper/
 ```
 
-放完之后会报一个找不到 `MyMapper` 的错，把 `src/main/java/cn/shadowcat/utils/MyMapper.java` 复制到你项目的 `common/src/main/java/cn/shadowcat/utils/MyMapper.java` 就可以了。
+完成之后会报一个找不到 `MyMapper` 的错误，把 `src/main/java/cn/shadowcat/utils/MyMapper.java` 复制到你项目的 `common/src/main/java/cn/shadowcat/utils/MyMapper.java` 就可以了。
