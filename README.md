@@ -1,10 +1,10 @@
 # mybatis-generator-config
 
-快速生成 MyBatis 逆向工程，使用 MyBatis Generator。
+快速生成 MyBatis 逆向工程，使用 MyBatis-Generator。
 
 ## 使用方法
 
-使用前建议删除目录中的所有文件以免产生冲突的问题，可以使用项目根目录下的脚本：
+使用前建议删除目录中的所有已生成的逆向工程文件以免产生冲突的问题，可以使用项目根目录下的脚本：
 
 ```shell
 chmod +x ./clean.sh && ./clean.sh
