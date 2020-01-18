@@ -7,7 +7,7 @@
 使用前建议删除目录中的所有已生成的逆向工程文件以免产生冲突的问题，可以使用项目根目录下的脚本：
 
 ```shell
-chmod +x ./clean.sh && ./clean.sh
+sh clean.sh
 ```
 
 首先，在 `generatorConfig.xml` 中配置 JDBC 连接信息。
@@ -22,11 +22,11 @@ chmod +x ./clean.sh && ./clean.sh
 # POJO，例如放在你项目的 pojo/src/main/java/
 src/main/java/cn/shadowcat/pojo/
 
-# Mapper，例如放在你项目的 mapper/src/main/java/cn/shadowcat/mapper
-src/main/java/cn/shadowcat/mapper/
+# Mapper，例如放在你项目的 mapper/src/main/java/com/github/mapper
+src/main/java/com/github/mapper/
 
 # Mapper XML，例如放在你项目的 api/resources/mappers
 src/main/resources/mapper/
 ```
 
-完成之后会报一个找不到 `MyMapper` 的错误，把 `src/main/java/cn/shadowcat/utils/MyMapper.java` 复制到你项目的 `common/src/main/java/cn/shadowcat/utils/MyMapper.java` 就可以了。
+完成之后会抛出找不到 `MyMapper` 的异常，把 `src/main/java/com/github/utils/MyMapper.java` 复制到你项目的 `common/src/main/java/com/github/utils/MyMapper.java` 就可以了。
