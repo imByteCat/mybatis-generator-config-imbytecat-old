@@ -1,6 +1,5 @@
-# mybatis-generator-config
-
-快速生成 MyBatis 逆向工程，使用 MyBatis-Generator。
+# mybatis-generator-config-imbytecat
+使用 MyBatis-Generator 快速生成 MyBatis 逆向工程。
 
 ## 使用方法
 
